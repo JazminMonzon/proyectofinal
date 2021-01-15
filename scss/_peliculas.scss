@@ -1,0 +1,106 @@
+/*css catálogo y próximos estrenos*/
+.peliculas{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "foto1" 
+                        "foto2" 
+                        "foto3" 
+                        "foto4";
+    grid-row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.peliculas__subcontenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        img{
+            width: 60vw;
+            box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+        }
+
+        figure{
+            position: relative;
+            height: 100%;
+            width: 80vw;
+            overflow: hidden;
+            box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+            border-radius: 0px;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+                height: 100%;
+                transition: all 500ms ease-out;
+            }
+
+            .peliculas__capa{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 102, 123, 0.7);
+                transition: all 500ms ease-out;
+                opacity: 0;
+                visibility: hidden;
+                text-align: center;
+
+                h3{
+                    color: #fff;
+                    font-size: 2vh;
+                    transition: all 500ms ease-out;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    }
+                
+                a{
+                    color: #fff;
+                    }
+            }
+        }
+
+    }
+
+.peliculas__subcontenedor figure:hover > .peliculas__capa{
+    opacity: 1;
+    visibility: visible;
+        h3{
+            margin-top: 70px;
+            margin-bottom: 15px;
+        }
+}
+
+.peliculas__subcontenedor figure:hover > img{
+    transform: scale(1.3);
+}
+
+@media only screen and (min-width: 768px)
+        {   
+            .peliculas{
+                display: grid;
+                height: 100%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "foto1 foto2" 
+                                    "foto3 foto4";
+                grid-row-gap: 10px;
+                margin-bottom: 50px;
+                    img{
+                        width: 28vw;
+                    }
+            }
+
+            .peliculas__subcontenedor figure{
+                width: 30vw;
+                    .peliculas__capa h3{
+                        font-size: 1.2vw;
+                    }
+            }
+        }

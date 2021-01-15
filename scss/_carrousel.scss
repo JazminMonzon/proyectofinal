@@ -1,0 +1,54 @@
+/*css carrousel*/
+.carousel-item{
+    height: 400px;   
+}
+
+.carousel-link{
+        font-family: $principal_font;
+        font-size: 1.1rem;
+        color: white;
+        text-align: center;
+}
+
+.carousel-link--nueva{
+    @extend.carousel-link;
+    text-decoration: none;
+}
+
+.carousel-link--nueva:hover{
+    color: orange;
+    text-decoration: none;
+}
+
+@media(min-width: 992px){
+    .carousel-item{
+        height: 80vh !important;
+    }
+    .carousel-link{
+        font-size: 1.5rem;
+    } 
+}
+
+.slide1{
+    background-image: url("../imagenes/Carrousel/PP\ Carrousel.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide2{
+    background-image: url("../imagenes/Carrousel/La\ dosis\ Carrousel.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide3{
+    background-image: url("../imagenes/Carrousel/DLNM\ Carrousel.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide4{
+    background-image: url("../imagenes/Carrousel/SF\ Carrousel.jpg");
+    background-size: cover;
+    background-position: center center;
+}

@@ -1,0 +1,32 @@
+/*css contacto*/
+.col-md-3{
+    background: rgb(116, 204, 219);
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.contact-info{
+    margin-top: 10%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    background: white;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+.contact-form button{
+    background: rgb(81, 129, 141);
+    color: white;
+    font-weight: 600;
+    width: 25%;
+}

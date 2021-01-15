@@ -1,0 +1,12 @@
+$principal_font: 'Montserrat', sans-serif;
+$principal_fontsize: 1rem;
+$principal_color: rgb(81, 129, 141); 
+$color_del_tema: classic;
+
+@import "main";
+@import "navbar";
+@import "carrousel";
+@import "quehacemos";
+@import "peliculas";
+@import "equipo";
+@import "contacto";

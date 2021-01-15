@@ -1,0 +1,169 @@
+/*css main*/
+@mixin style($fontsize, $color){
+    font-size: $fontsize;
+    color: $color;
+}
+
+body{ 
+    @if $color_del_tema == classic {
+        background-color: rgb(196, 224, 249);
+    } @else if $color_del_tema == dark {
+        background-color: gray;
+    }
+}
+
+img{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    }
+
+p{
+    @include style(1rem, black);
+    font-family: $principal_font;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+    p{
+        @include style(1.5rem, black);
+        font-family: $principal_font;
+        text-align: center;
+    }
+}
+
+h2{
+    @include style(1.4rem, black);
+    font-family: $principal_font;
+    text-align: center;
+}
+
+h3{
+    @include style(1.3rem, black);
+    font-family: $principal_font;
+    text-align: center;
+}
+
+h4{
+    @include style(1.1rem, $principal_color)
+    font-family: $principal_font;
+    text-align: center;
+}
+
+h5{
+    @include style(0.8rem, black);
+    font-family: $principal_font;
+    text-align: center;
+}
+
+.title{
+    font-family: $principal_font;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+    .title{
+        font-size: 3.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.subtitulo{
+    @include style(1.6rem, black);
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.no-gutters{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.texto-pelicula{
+    font-family: $principal_font;
+    @include style($principal_fontsize * 2, $principal_color);
+}
+
+.texto-pelicula--nuevo{
+    font-family: $principal_font;
+    @include style($principal_fontsize, black);
+}
+
+@media only screen and (min-width: 768px){
+    .texto-pelicula{
+        margin-top: 50px;
+    }
+}
+
+/*css footer*/
+footer{
+    text-align: center;
+    background-color: $principal_color;
+    font-family: $principal_font;
+    color: black;
+    margin: 25px;
+    padding: 30px;
+}
+
+footer .nav-item{
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+footer .nav-item :hover{
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+.icono{
+    width: 5vw;
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 768px){
+    .icono{
+        width: 6vh;
+    }
+
+    footer .nav-item{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/*css botón de ir arriba*/
+#button-up{
+   width: 15px;
+   height: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 20px;
+   position: fixed;
+   bottom: 60px;
+   right: 7px;
+   cursor: pointer;
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,0.1);
+}
+
+@media only screen and (min-width: 1024px){
+    #button-up{
+        width: 60px;
+        height: 60px;
+        background: rgb(196, 224, 249);
+        bottom: 50px;
+        right: 50px;
+        border: 4px solid transparent;
+        transition: all 300ms ease-in;
+    }
+}

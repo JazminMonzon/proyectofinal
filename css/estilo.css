@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/*css main*/
+body {
+  background-color: #c4e0f9; }
+
+img {
+  display: block;
+  margin: auto;
+  margin-top: 20px; }
+
+p {
+  font-size: 1rem;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    text-align: center; } }
+
+h2 {
+  font-size: 1.4rem;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
+h3 {
+  font-size: 1.3rem;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
+h4 {
+  font-size: 1.1rem;
+  color: #51818d;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
+h5 {
+  font-size: 0.8rem;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; }
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px; } }
+
+.subtitulo {
+  font-size: 1.6rem;
+  color: black;
+  font-family: 'Bebas Neue', cursive;
+  text-align: center;
+  margin-top: 5px; }
+
+.no-gutters {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.texto-pelicula {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #51818d; }
+
+.texto-pelicula--nuevo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: black; }
+
+@media only screen and (min-width: 768px) {
+  .texto-pelicula {
+    margin-top: 50px; } }
+
+/*css footer*/
+footer {
+  text-align: center;
+  background-color: #51818d;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  margin: 25px;
+  padding: 30px; }
+
+footer .nav-item {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  margin-bottom: 1rem; }
+
+footer .nav-item :hover {
+  transform: scale(1.2);
+  overflow: hidden; }
+
+.icono {
+  width: 5vw;
+  margin-top: 0; }
+
+@media only screen and (min-width: 768px) {
+  .icono {
+    width: 6vh; }
+  footer .nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem; } }
+
+/*css botón de ir arriba*/
+#button-up {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 60px;
+  right: 7px;
+  cursor: pointer; }
+
+#button-up:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0.1); }
+
+@media only screen and (min-width: 1024px) {
+  #button-up {
+    width: 60px;
+    height: 60px;
+    background: #c4e0f9;
+    bottom: 50px;
+    right: 50px;
+    border: 4px solid transparent;
+    transition: all 300ms ease-in; } }
+
+/*css navbar*/
+header .navbar {
+  background-color: black;
+  padding: 1rem 2rem;
+  margin: 15px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  color: white !important;
+  margin-bottom: 25px; }
+
+header .nav-link {
+  color: white !important; }
+
+header .nav-item {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+header .nav-item :hover {
+  color: orange !important; }
+
+/*css carrousel*/
+.carousel-item {
+  height: 400px; }
+
+.carousel-link, .carousel-link--nueva {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  text-align: center; }
+
+.carousel-link--nueva {
+  text-decoration: none; }
+
+.carousel-link--nueva:hover {
+  color: orange;
+  text-decoration: none; }
+
+@media (min-width: 992px) {
+  .carousel-item {
+    height: 80vh !important; }
+  .carousel-link, .carousel-link--nueva {
+    font-size: 1.5rem; } }
+
+.slide1 {
+  background-image: url("../imagenes/Carrousel/PP Carrousel.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.slide2 {
+  background-image: url("../imagenes/Carrousel/La dosis Carrousel.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.slide3 {
+  background-image: url("../imagenes/Carrousel/DLNM Carrousel.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.slide4 {
+  background-image: url("../imagenes/Carrousel/SF Carrousel.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+/*css que hacemos*/
+.queHacemos {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  line-height: 2rem; }
+
+.queHacemos__titular {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px;
+  color: #51818d; }
+
+/*css catálogo y próximos estrenos*/
+.peliculas {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "foto1"  "foto2"  "foto3"  "foto4";
+  grid-row-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 50px; }
+
+.peliculas__subcontenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .peliculas__subcontenedor img {
+    width: 60vw;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5); }
+  .peliculas__subcontenedor figure {
+    position: relative;
+    height: 100%;
+    width: 80vw;
+    overflow: hidden;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    cursor: pointer; }
+    .peliculas__subcontenedor figure img {
+      width: 100%;
+      height: 100%;
+      transition: all 500ms ease-out; }
+    .peliculas__subcontenedor figure .peliculas__capa {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 102, 123, 0.7);
+      transition: all 500ms ease-out;
+      opacity: 0;
+      visibility: hidden;
+      text-align: center; }
+      .peliculas__subcontenedor figure .peliculas__capa h3 {
+        color: #fff;
+        font-size: 2vh;
+        transition: all 500ms ease-out;
+        margin-left: 15px;
+        margin-right: 15px; }
+      .peliculas__subcontenedor figure .peliculas__capa a {
+        color: #fff; }
+
+.peliculas__subcontenedor figure:hover > .peliculas__capa {
+  opacity: 1;
+  visibility: visible; }
+  .peliculas__subcontenedor figure:hover > .peliculas__capa h3 {
+    margin-top: 70px;
+    margin-bottom: 15px; }
+
+.peliculas__subcontenedor figure:hover > img {
+  transform: scale(1.3); }
+
+@media only screen and (min-width: 768px) {
+  .peliculas {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "foto1 foto2"  "foto3 foto4";
+    grid-row-gap: 10px;
+    margin-bottom: 50px; }
+    .peliculas img {
+      width: 28vw; }
+  .peliculas__subcontenedor figure {
+    width: 30vw; }
+    .peliculas__subcontenedor figure .peliculas__capa h3 {
+      font-size: 1.2vw; } }
+
+/*css equipo*/
+.equipo {
+  text-align: center; }
+
+.equipo__subcontenedor {
+  padding: 5px 10px 5px 10px;
+  margin: 15px;
+  display: inline-block;
+  width: 300px;
+  text-align: center; }
+
+.equipo__img {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 30px; }
+
+/*css contacto*/
+.col-md-3 {
+  background: #74ccdb;
+  padding: 4%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
+
+.contact-info {
+  margin-top: 10%; }
+
+.contact-info img {
+  margin-bottom: 15%; }
+
+.contact-info h2 {
+  margin-bottom: 10%; }
+
+.col-md-9 {
+  background: white;
+  padding: 3%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem; }
+
+.contact-form label {
+  font-weight: 600;
+  font-family: 'Lato', sans-serif; }
+
+.contact-form button {
+  background: #51818d;
+  color: white;
+  font-weight: 600;
+  width: 25%; }
