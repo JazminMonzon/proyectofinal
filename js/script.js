@@ -51,11 +51,41 @@ for (let i = 0; i < baseDeDatos.length; i++) {
                 </div>
                 <br>
                 <div class="card-footer">
-                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick="agregarAlCarrito()">Alquilar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Alquilar</button>
                 </div>
             </div>
         </div>
         `;
   }
     
-document.getElementById("carrito").innerHTML = aux;
+document.getElementById("alquileres").innerHTML = aux;
+
+if(localStorage.getItem("carrito") != null){
+    console.log("Entro a la validacion");
+    let valoresDelCarrito = JSON.parse(localStorage.getItem("carrito"));
+    carrito = valoresDelCarrito;
+}
+    
+function agregarAlCarrito(nombrePeli){
+    carrito.push(nombrePeli);
+    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    // precio-total
+    let aux = 0;
+    for (let i = 0; i < carrito.length; i++) {
+    aux += carrito[i].precio;
+    }
+    document.getElementById("precio-total").innerHTML = "Precio total: $" +aux;
+}
+    
+function borrarUnProducto(){
+    const  nuevoCarrito = [];
+    for( let i = 0; i<carrito.length; i++){
+        if(i != 1){
+            nuevoCarrito.push(carrito[i]);
+        }
+}
+
+localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+carrito = nuevoCarrito;
+}
