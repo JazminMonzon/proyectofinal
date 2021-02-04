@@ -24,8 +24,6 @@ baseDeDatos.push(peliculaTres);
 baseDeDatos.push(peliculaCuatro);
 baseDeDatos.push(peliculaCinco);
 baseDeDatos.push(peliculaSeis);
-
-console.log(baseDeDatos);
     
 let aux = ``;
 for (let i = 0; i < baseDeDatos.length; i++) {
@@ -39,19 +37,12 @@ for (let i = 0; i < baseDeDatos.length; i++) {
                     </h3>
                     <h4>$${baseDeDatos[i].precio}</h4>
                 </div>
-                <div class="form-inline justify-content-center">
-                    <label for="exampleFormControlSelect1" class="mr-sm-2">Días de alquiler</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
-                </div>
                 <br>
                 <div class="card-footer">
                     <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Alquilar</button>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='borrarUnProducto(${JSON.stringify(baseDeDatos[i])})'>-</button>
                 </div>
             </div>
         </div>
@@ -61,28 +52,45 @@ for (let i = 0; i < baseDeDatos.length; i++) {
 document.getElementById("alquileres").innerHTML = aux;
 
 if(localStorage.getItem("carrito") != null){
-    console.log("Entro a la validacion");
-    let valoresDelCarrito = JSON.parse(localStorage.getItem("carrito"));
-    carrito = valoresDelCarrito;
+    carrito = JSON.parse(localStorage.getItem("carrito"));
 }
-    
+
 function agregarAlCarrito(nombrePeli){
     carrito.push(nombrePeli);
-    console.log(carrito);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    // precio-total
     let aux = 0;
+    let aux2 = "";
     for (let i = 0; i < carrito.length; i++) {
-    aux += carrito[i].precio;
+        aux += carrito[i].precio;
+        aux2 += `${carrito[i].nombre} - Precio: $ ${(carrito[i].precio).toString()} <br>`;
     }
-    document.getElementById("precio-total").innerHTML = "Precio total: $" +aux;
+    document.getElementById("precio-total").innerHTML = `Elegiste: <br>
+                                                        ${aux2} 
+                                                        Precio total: $ ${aux}
+                                                        `;
 }
-    
+
 function borrarUnProducto(){
     const  nuevoCarrito = [];
-    for( let i = 0; i<carrito.length; i++){
-        if(i != 1){
+    for ( let i = 0; i<carrito.length; i++){
+        if(i > 0){
             nuevoCarrito.push(carrito[i]);
+        }      
+        let aux = 0;
+        let aux2 = "";
+        for (let i = 0; i < carrito.length; i++) {
+            aux += carrito[i].precio;
+            aux2 += `${carrito[i].nombre} - Precio: $ ${(carrito[i].precio).toString()} <br>`;
+        }
+        if (nuevoCarrito.length > 0){
+        document.getElementById("precio-total").innerHTML = `Elegiste: <br>
+                                                            ${aux2} 
+                                                            Precio total: $ ${aux}
+                                                            `; 
+        }
+        else {
+        document.getElementById("precio-total").innerHTML = `No hay películas seleccionadas
+        `; 
         }
 }
 
