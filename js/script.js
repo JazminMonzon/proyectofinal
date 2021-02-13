@@ -49,14 +49,15 @@ for (let i = 0; i < baseDeDatos.length; i++) {
         `;
   }
     
-document.getElementById("alquileres").innerHTML = aux;
+// document.getElementById("alquileres").innerHTML = aux;
+$("#alquileres").html(aux);
 
 if(localStorage.getItem("carrito") != null){
     carrito = JSON.parse(localStorage.getItem("carrito"));
 }
 
-function agregarAlCarrito(nombrePeli){
-    carrito.push(nombrePeli);
+function agregarAlCarrito(peli){
+    carrito.push(peli);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     let aux = 0;
     let aux2 = "";
@@ -64,10 +65,16 @@ function agregarAlCarrito(nombrePeli){
         aux += carrito[i].precio;
         aux2 += `${carrito[i].nombre} - Precio: $ ${(carrito[i].precio).toString()} <br>`;
     }
-    document.getElementById("precio-total").innerHTML = `Elegiste: <br>
-                                                        ${aux2} 
-                                                        Precio total: $ ${aux}
-                                                        `;
+    $("#precio-total").html(`<div>Elegiste: <br>${aux2} Precio total: $ ${aux}</div>`);
+    //document.getElementById("precio-total").innerHTML = `Elegiste: <br>
+    //                                                    ${aux2} 
+    //                                                    Precio total: $ ${aux}
+    //                                                    `;
+    $("#precio-total").fadeOut()
+    $("#precio-total").fadeIn()
+    $("#precio-total").css("color", "green")
+    $("#precio-total").css("fontSize", "18px")
+    console.log(carrito);
 }
 
 function borrarUnProducto(){
@@ -92,6 +99,7 @@ function borrarUnProducto(){
         document.getElementById("precio-total").innerHTML = `No hay películas seleccionadas
         `; 
         }
+        console.log(nuevoCarrito);
 }
 
 localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
