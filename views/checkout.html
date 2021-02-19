@@ -63,16 +63,88 @@
     </header>
     <main>
         <h2 class="title wow flipInX">Cine en casa</h2>
-        <div class="row" id="alquileres">
-        </div>
-        <div class="list-group" style="text-align: center;">
-            <a href="#" class="list-group-item" id="precio-total" style="text-decoration: none">No hay películas seleccionadas</a>
-        </div>
-        <div class="card-footer" style="text-align: center;">
-            <a href="../views/checkout.html"><button class="btn btn-info my-2 my-sm-0 btn-lg"" style="color: white;">Checkout</button></a>
-        </div>
-        <div class="card-footer" style="text-align: center;">
-            <button class="btn btn-danger my-2 my-sm-0 btn-lg"" id="vaciar-carrito" onclick="vaciarCarrito()">Vaciar carrito</button>
+        <div class="row">
+            <div class="col-75">
+              <div class="container-carrito">
+                <form action="/action_page.php">
+          
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Datos de Facturación</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Nombre y apellido</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Juan Pérez">
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" name="email" placeholder="juan@ejemplo.com">
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Dirección</label>
+                      <input type="text" id="adr" name="address" placeholder="Calle Falsa 123">
+                      <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
+                      <input type="text" id="city" name="city" placeholder="Buenos Aires">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">Provincia</label>
+                          <input type="text" id="state" name="state" placeholder="Buenos Aires">
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Código Postal</label>
+                          <input type="text" id="zip" name="zip" placeholder="1428">
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="col-50">
+                      <h3>Pago</h3>
+                      <label for="fname">Medios de pago aceptados</label>
+                      <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                      </div>
+                      <label for="cname">Nombre (como figura en la tarjeta)</label>
+                      <input type="text" id="cname" name="cardname" placeholder="Juan Pérez">
+                      <label for="ccnum">Número de la tarjeta</label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      <label for="expmonth">Mes de vencimiento</label>
+                      <input type="text" id="expmonth" name="expmonth" placeholder="Septiembre">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="expyear">Año de vencimiento</label>
+                          <input type="text" id="expyear" name="expyear" placeholder="2028">
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                  <label>
+                    <input type="checkbox" checked="checked" name="news"> Quiero recibir novedades de nuevos estrenos por mail
+                  </label>
+                  <input type="submit" value="Procesar pago" class="btn-carrito">
+                </form>
+              </div>
+            </div>
+          
+            <div class="col-25" id="checkout">
+              <!-- <div class="container-carrito">
+                <h4>Carrito
+                  <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b>4</b>
+                  </span>
+                </h4>
+                <p><a href="#">Película 1</a> <span class="price">$200</span></p>
+                <p><a href="#">Película 2</a> <span class="price">$200</span></p>
+                <p><a href="#">Película 3</a> <span class="price">$100</span></p>
+                <p><a href="#">Película 4</a> <span class="price">$100</span></p>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>$600</b></span></p>
+                -->
+            </div>
+            </div>
         </div>
     </main> 
     <!--Botón de ir arriba-->
