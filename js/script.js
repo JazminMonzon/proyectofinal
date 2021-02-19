@@ -123,17 +123,17 @@ for (let i = 0; i < carrito.length; i++) {
     auxPrecioTotal += carrito[i].precio;
     auxCheckout += `
     <div class="container-carrito">
-    <h4>Carrito
+    <h3>Carrito
       <span class="price" style="color:black">
         <i class="fa fa-shopping-cart"></i>
         <b>${carrito.length}</b>
       </span>
-    </h4>
-    <p><a href="${carrito[i].link}" style="text-decoration: none">${carrito[i].nombre}</a> <span class="price">$${carrito[i].precio}</span></p>
+    </h3>
+    <p><img class="card-img-top" style="width: 50%" src="${carrito[i].imagen}" alt="Película en carrito"></p>
+    <h4><a href="${carrito[i].link}" style="text-decoration: none">${carrito[i].nombre}</a><span class="price">$${carrito[i].precio}</span></h4>
     <hr>
     <p>Total <span class="price" style="color:black"><b>$${auxPrecioTotal}</b></span></p>
   </div>
-</div>
         `;
   }
 
