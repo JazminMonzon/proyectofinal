@@ -34,7 +34,6 @@ for (let i = 0; i < baseDeDatos.length; i++) {
             <div class="card h-100 text-center">
                 <a href="${baseDeDatos[i].link}"><img class="card-img-top" src="${baseDeDatos[i].imagen}" alt=""></a>
                 <div class="card-body">
-                    <h5>${baseDeDatos[i].id}</h5>
                     <h3 class="card-title">
                         <a href="${baseDeDatos[i].link}" style="text-decoration: none">${baseDeDatos[i].nombre}</a>
                     </h3>
@@ -136,5 +135,6 @@ for (let i = 0; i < carrito.length; i++) {
   </div>
         `;
   }
-
 document.getElementById("checkout").innerHTML = auxCheckout;
+
+// document.getElementById("precio-total-checkout").innerHTML = `Total $${auxPrecioTotal}`; 
