@@ -1,0 +1,44 @@
+{
+"peliculas": [{
+    "nombre": "La muerte no existe y el amor tampoco", 
+    "precio": 200, 
+    "imagen": "../imagenes/Afiche LMNE.jpg", 
+    "link": "#", 
+    "id": 1
+}, 
+{
+    "nombre": "Araña", 
+    "precio": 200, 
+    "imagen": "../imagenes/Afiche Arana.jpg", 
+    "link": "#", 
+    "id": 2
+},
+{
+    "nombre": "El cuidado de los otros", 
+    "precio": 100, 
+    "imagen": "../imagenes/Afiche ECDLO.jpg", 
+    "link": "#", 
+    "id": 3
+},
+{
+    "nombre": "Los adoptantes", 
+    "precio": 100, 
+    "imagen": "../imagenes/Afiche Los adoptantes.png", 
+    "link": "#", 
+    "id": 4
+},
+{
+    "nombre": "Las buenas intenciones", 
+    "precio": 100, 
+    "imagen": "../imagenes/Afiche LBI.jpg", 
+    "link": "../views/lasbuenasintenciones.html", 
+    "id": 5
+},
+{
+    "nombre": "El motoarrebatador", 
+    "precio": 100, 
+    "imagen": "../imagenes/Afiche El motoarrebatador.jpg", 
+    "link": "../views/elmotoarrebatador.html",
+    "id": 6
+}]
+}

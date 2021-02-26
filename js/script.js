@@ -1,3 +1,4 @@
+// CINEENCASA.HTML
 let carrito = [];
 
 class Pelicula{
@@ -26,7 +27,7 @@ baseDeDatos.push(peliculaTres);
 baseDeDatos.push(peliculaCuatro);
 baseDeDatos.push(peliculaCinco);
 baseDeDatos.push(peliculaSeis);
-    
+
 let aux = ``;
 for (let i = 0; i < baseDeDatos.length; i++) {
     aux += `
@@ -115,7 +116,21 @@ function vaciarCarrito(){
     carrito = nuevoCarrito;
 }
 
-// CHECKOUT
+// AJAX
+$("#botonPrueba").click(function(){
+    $.ajax({
+        url: "/data.json",
+        dataType: "json",
+        success: function(response) {
+            $.each(response.usuarios, function(item){
+                alert(item.nombre);
+            });
+        }
+    });
+    
+    });
+
+// CHECKOUT.HTML
 let auxCheckout = ``;
 let auxPrecioTotal = 0;
 for (let i = 0; i < carrito.length; i++) {
