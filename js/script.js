@@ -1,3 +1,21 @@
+var urlLocal;
+var ajaxdata;
+$(document).ready(function(e) {
+    urlLocal = "/data.json";
+    initData();
+});
+
+function initData() {
+    ajaxdata = $.ajax({
+        method: "GET",
+        url: urlLocal
+    }).done(function(data) {
+        console.log(data);
+    }).fail(function(error) {
+        console.log(error);
+    });
+    } 
+
 // CINEENCASA.HTML
 let carrito = [];
 
@@ -122,12 +140,9 @@ $("#botonPrueba").click(function(){
         url: "/data.json",
         dataType: "json",
         success: function(response) {
-            $.each(response.usuarios, function(item){
-                alert(item.nombre);
-            });
+            console.log(response);
         }
     });
-    
     });
 
 // CHECKOUT.HTML
