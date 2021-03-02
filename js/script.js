@@ -1,15 +1,4 @@
 // AJAX
-$("#botonPrueba").click(function(){
-    $.ajax({
-        url: "/data.json",
-        dataType: "json",
-        success: function(response) {
-            console.log(response);
-            alert("Envío exitoso");
-        }
-    });
-    });
-
 var urlLocal;
 var ajaxdata;
 $(document).ready(function(e) {
