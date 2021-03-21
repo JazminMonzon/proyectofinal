@@ -112,8 +112,7 @@ function borrarUnProducto(){
                                                             `; 
         }
         else {
-        document.getElementById("precio-total").innerHTML = `No hay películas seleccionadas
-        `; 
+        document.getElementById("precio-total").innerHTML = `No hay películas seleccionadas`; 
         }
         console.log(nuevoCarrito);
 }
@@ -136,7 +135,7 @@ let auxPrecioTotal = 0;
 for (let i = 0; i < carrito.length; i++) {
     auxPrecioTotal += carrito[i].precio;
     auxCheckout += `
-    <p><img class="card-img-top" style="width: 50%" src="${carrito[i].imagen}" alt="Película en carrito"></p>
+    <a href="${carrito[i].link}"><p><img class="card-img-top" style="width: 50%" src="${carrito[i].imagen}" alt="Película en carrito"></p></a>
     <h4><a href="${carrito[i].link}" style="text-decoration: none">${carrito[i].nombre}</a><span class="price">$${carrito[i].precio}</span></h4>
         `;
   }
