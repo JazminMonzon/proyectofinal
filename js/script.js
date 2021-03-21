@@ -60,7 +60,7 @@ for (let i = 0; i < baseDeDatos.length; i++) {
                     <h4>$${baseDeDatos[i].precio}</h4>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Alquilar</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Agregar al carrito</button>
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='borrarUnProducto(${JSON.stringify(baseDeDatos[i])})'><i class="fa fa-trash"></i> </button>
@@ -89,7 +89,7 @@ function agregarAlCarrito(peli){
     $("#precio-total").fadeOut(400)
     $("#precio-total").fadeIn()
     $("#precio-total").css("color", "green")
-    $("#precio-total").css("fontSize", "18px")
+    $("#precio-total").css("fontSize", "20px")
     console.log(carrito);
 }
 
@@ -108,8 +108,7 @@ function borrarUnProducto(){
         if (nuevoCarrito.length > 0){
         document.getElementById("precio-total").innerHTML = `Elegiste: <br>
                                                             ${aux2} 
-                                                            Precio total: $ ${aux}
-                                                            `; 
+                                                            Precio total: $ ${aux}`; 
         }
         else {
         document.getElementById("precio-total").innerHTML = `No hay películas seleccionadas`; 
