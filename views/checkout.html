@@ -91,7 +91,6 @@
                         </div>
                       </div>
                     </div>
-          
                     <div class="col-50">
                       <h3>Pago</h3>
                       <label for="fname">Medios de pago aceptados</label>
@@ -118,33 +117,27 @@
                         </div>
                       </div>
                     </div>
-          
                   </div>
                   <label>
                     <input type="checkbox" checked="checked" name="news"> Quiero recibir novedades de nuevos estrenos por mail
                   </label>
-                  <input type="submit" value="Procesar pago" class="btn-carrito">
+                  <div class="card-footer" style="text-align: center;">
+                    <a class="btn-carrito btn btn-success my-2 my-sm-0 btn-lg" style="text-decoration: none; color: white;" href="#">Procesar pago</a>
+                  </div>
                 </form>
               </div>
             </div>
-          
-            <div class="col-25" id="checkout">
-              <!-- <div class="container-carrito">
-                <h4>Carrito
+            <div class="col-25">
+              <div class="container-carrito">
+                <h2>Carrito
                   <span class="price" style="color:black">
                     <i class="fa fa-shopping-cart"></i>
-                    <b>4</b>
+                    <span id="carrito-length"></span>
                   </span>
-                </h4>
-                <p><a href="#">Película 1</a> <span class="price">$200</span></p>
-                <p><a href="#">Película 2</a> <span class="price">$200</span></p>
-                <p><a href="#">Película 3</a> <span class="price">$100</span></p>
-                <p><a href="#">Película 4</a> <span class="price">$100</span></p>
-                <hr>
-                <p>Total <span class="price" style="color:black"><b>$600</b></span></p>
-                -->
+                  <div id="checkout"></div>
+                </h2>
+                <h2 class="card-footer" id="precio-total-checkout" style="color:black">$</h2>
             </div>
-            <!-- <p><span class="price col-25 container-carrito card-footer" id="precio-total-checkout" style="color:black"><b>$</b></span></p> -->
             </div>
         </div>
     </main> 

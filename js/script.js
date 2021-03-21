@@ -63,14 +63,13 @@ for (let i = 0; i < baseDeDatos.length; i++) {
                     <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='agregarAlCarrito(${JSON.stringify(baseDeDatos[i])})'>Alquilar</button>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='borrarUnProducto(${JSON.stringify(baseDeDatos[i])})'>-</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" style="color: black;" onclick='borrarUnProducto(${JSON.stringify(baseDeDatos[i])})'><i class="fa fa-trash"></i> </button>
                 </div>
             </div>
         </div>
         `;
   }
     
-// document.getElementById("alquileres").innerHTML = aux;
 $("#alquileres").html(aux);
 
 if(localStorage.getItem("carrito") != null){
@@ -87,10 +86,6 @@ function agregarAlCarrito(peli){
         aux2 += `${carrito[i].nombre} - Precio: $ ${(carrito[i].precio).toString()} <br>`;
     }
     $("#precio-total").html(`<div>Elegiste: <br>${aux2} Precio total: $ ${aux}</div>`);
-    //document.getElementById("precio-total").innerHTML = `Elegiste: <br>
-    //                                                    ${aux2} 
-    //                                                    Precio total: $ ${aux}
-    //                                                    `;
     $("#precio-total").fadeOut(400)
     $("#precio-total").fadeIn()
     $("#precio-total").css("color", "green")
@@ -141,20 +136,13 @@ let auxPrecioTotal = 0;
 for (let i = 0; i < carrito.length; i++) {
     auxPrecioTotal += carrito[i].precio;
     auxCheckout += `
-    <div class="container-carrito">
-    <h3>Carrito
-      <span class="price" style="color:black">
-        <i class="fa fa-shopping-cart"></i>
-        <b>${carrito.length}</b>
-      </span>
-    </h3>
     <p><img class="card-img-top" style="width: 50%" src="${carrito[i].imagen}" alt="Película en carrito"></p>
     <h4><a href="${carrito[i].link}" style="text-decoration: none">${carrito[i].nombre}</a><span class="price">$${carrito[i].precio}</span></h4>
-    <hr>
-    <p>Total <span class="price" style="color:black"><b>$${auxPrecioTotal}</b></span></p>
-  </div>
         `;
   }
+
 document.getElementById("checkout").innerHTML = auxCheckout;
 
-// document.getElementById("precio-total-checkout").innerHTML = `Total $${auxPrecioTotal}`; 
+document.getElementById("carrito-length").innerHTML = `<b>${carrito.length}</b>`; 
+
+document.getElementById("precio-total-checkout").innerHTML = `Total $${auxPrecioTotal}`; 
